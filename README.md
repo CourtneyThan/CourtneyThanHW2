@@ -12,3 +12,5 @@
 | 100   | 0.0145s 
 | 1000  | 0.8411s 
 | 10000 | 23.8349s
+## Problem Two:
+### (Explaination): The strategy that I chose is strategy 3
