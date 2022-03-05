@@ -8,9 +8,17 @@
 ## Problem One Excecution Time:
 |   N   | Time (sec)|
 |-------|----------|
-| 10    | 0.0027s 
-| 100   | 0.0145s 
-| 1000  | 0.8411s 
-| 10000 | 23.8349s
+| 10    | 0.0027 
+| 100   | 0.0145 
+| 1000  | 0.8411 
+| 10000 | 23.8349
 ## Problem Two:
-### (Explaination): The strategy that I chose is strategy 3
+### (Explaination): The strategy that I chose is strategy 3. I chose this strategy out of the other two because it can perform more effectively. The first strategy is worse than strategy 3 because every thread is guaranteed to visit the room and there could be one thread that spends the entire execution time inside the room. The second strategy is also worse than strategy 3 because the sign can be implemented using a queue lock which is similar to my solution in problem 3.
+### (Code Analysis): I started this problem off similar to the last problem where I created an array of thread of size n and initialize them. Then I created a queue and added each index of the array of threads into the queue in order. Then I created a for loop that will remove each index in the queue one by one and run the thread at that index. Inside each thread, the run function will prints that the guest has entered the room follow by the guest's leaving the room. Inside the run function, there is a 50% chance that the guest will want to re-enter the queue, if this happen then the index of the thread will be readded into the queue.
+## Problem Two Excecution Time:
+|   N   | Time (sec)|
+|-------|----------|
+| 10    | 0.0009
+| 100   | 0.0027 
+| 1000  | 0.0126 
+| 10000 | 0.0794
